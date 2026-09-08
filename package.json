@@ -1,0 +1,40 @@
+{
+  "name": "@hardbulls/spectrum-ms250-usb",
+  "version": "0.0.1",
+  "description": "",
+  "homepage": "https://github.com/hardbulls/spectrum-ms250-usb#readme",
+  "bugs": {
+    "url": "https://github.com/hardbulls/spectrum-ms250-usb/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hardbulls/spectrum-ms250-usb.git"
+  },
+  "license": "MIT",
+  "author": "Arjan Frans <arjan@arjanfrans.com>",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "npx tsx --test test/**/*.ts",
+    "example": "npx tsx examples/example.ts",
+    "serial-tool": "npx http-server scoreboard-serial-tool -p 8080 -o",
+    "lint": "af-lint --env browser src",
+    "lint:fix": "af-lint --env browser --fix src",
+    "format": "af-format src examples",
+    "format:check": "af-format --check src examples"
+  },
+  "devDependencies": {
+    "@arjanfrans/af-codestyle": "^0.0.3",
+    "@types/node": "^25.9.0",
+    "typescript": "^5.9.3"
+  }
+}
